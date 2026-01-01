@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agricultural Market Price Intelligence</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🌾 Agricultural Market Price Intelligence System</h1>
+
+    <form onsubmit="findMarket(); return false;">
+        <label>Crop Name</label>
+        <input type="text" id="crop" placeholder="e.g. Wheat, Rice" required>
+
+        <label>District</label>
+        <input type="text" id="district" placeholder="e.g. Pune, Nashik" required>
+
+        <button type="submit">Find Best Market</button>
+    </form>
+
+    <div id="result" class="card hidden">
+        <h2>📊 Market Suggestion</h2>
+        <p><strong>Crop:</strong> <span id="rCrop"></span></p>
+        <p><strong>Suggested Market:</strong> <span id="rMarket"></span></p>
+        <p><strong>Best Time:</strong> Morning (8 AM – 11 AM)</p>
+
+        <button onclick="openMap()">📍 View Nearby Markets</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
